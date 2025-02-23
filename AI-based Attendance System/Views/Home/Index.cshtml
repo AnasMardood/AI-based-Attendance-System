@@ -1,0 +1,145 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!-- Hero Section -->
+<div class="hero-section text-center mb-5 p-5 rounded-lg bg-primary text-white">
+    <h1 class="display-4 mb-4">Smart attendance system</h1>
+    <p class="lead mb-4">Advanced facial recognition and attendance system using artificial intelligence</p>
+    <div class="d-flex justify-content-center gap-3">
+        <a href="@Url.Action("Index", "Attendance")" class="btn btn-light btn-lg">
+            <i class="bi bi-camera-video me-2"></i>Attendance registration
+        </a>
+        <a href="@Url.Action("Index", "Students")" class="btn btn-outline-light btn-lg">
+            <i class="bi bi-people me-2"></i>Student Management
+        </a>
+    </div>
+</div>
+
+<!-- Stats Section -->
+<div class="row mb-5">
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 text-center p-4">
+            <div class="display-4 text-primary mb-2">
+                <i class="bi bi-people-fill"></i>
+            </div>
+            <h3 class="h4 mb-2">Total students</h3>
+            <p class="display-6 text-primary mb-0">@ViewBag.TotalStudents</p>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 text-center p-4">
+            <div class="display-4 text-success mb-2">
+                <i class="bi bi-check-circle-fill"></i>
+            </div>
+            <h3 class="h4 mb-2">Attendance today</h3>
+            <p class="display-6 text-success mb-0">@ViewBag.TodayAttendance</p>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 text-center p-4">
+            <div class="display-4 text-info mb-2">
+                <i class="bi bi-clock-history"></i>
+            </div>
+            <h3 class="h4 mb-2">Attendance rate</h3>
+            <p class="display-6 text-info mb-0">@ViewBag.AttendanceRate%</p>
+        </div>
+    </div>
+</div>
+
+<!-- Features Section -->
+<div class="row mb-5">
+    <div class="col-lg-6 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h2 class="h4 mb-4 text-primary">
+                    <i class="bi bi-lightning-charge me-2"></i>
+                    System features
+                </h2>
+                <ul class="list-unstyled">
+                    <li class="mb-3 d-flex align-items-center">
+                        <i class="bi bi-check-circle-fill text-success me-2"></i>
+                        Automatic attendance recording using facial recognition technology
+                    </li>
+                    <li class="mb-3 d-flex align-items-center">
+                        <i class="bi bi-check-circle-fill text-success me-2"></i>
+                        High accuracy of identification
+                    </li>
+                    <li class="mb-3 d-flex align-items-center">
+                        <i class="bi bi-check-circle-fill text-success me-2"></i>
+                        Detailed attendance and absence reports
+                    </li>
+                    <li class="mb-3 d-flex align-items-center">
+                        <i class="bi bi-check-circle-fill text-success me-2"></i>
+                        Easy to use and simple interface
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h2 class="h4 mb-4 text-primary">
+                    <i class="bi bi-gear me-2"></i>
+                    How to use
+                </h2>
+                <div class="steps">
+                    <div class="step mb-3 d-flex align-items-start">
+                        <div class="step-number bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 30px; height: 30px;">1</div>
+                        <div>
+                            <h3 class="h6 mb-1">Add students</h3>
+                            <p class="text-muted small">Add student data and personal photos</p>
+                        </div>
+                    </div>
+                    <div class="step mb-3 d-flex align-items-start">
+                        <div class="step-number bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 30px; height: 30px;">2</div>
+                        <div>
+                            <h3 class="h6 mb-1">Turn on the camera</h3>
+                            <p class="text-muted small">Open the attendance registration page and turn on the camera.</p>
+                        </div>
+                    </div>
+                    <div class="step mb-3 d-flex align-items-start">
+                        <div class="step-number bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 30px; height: 30px;">3</div>
+                        <div>
+                            <h3 class="h6 mb-1">Taking pictures</h3>
+                            <p class="text-muted small">The system will automatically recognize students and record their attendance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Quick Actions -->
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="h4 mb-4 text-primary">
+                    <i class="bi bi-lightning me-2"></i>
+                    Quick Links
+                </h2>
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="@Url.Action("Create", "Students")" class="btn btn-outline-primary">
+                        <i class="bi bi-person-plus me-2"></i>
+                        Add a new student
+                    </a>
+                    <a href="@Url.Action("Index", "Attendance")" class="btn btn-outline-success">
+                        <i class="bi bi-camera me-2"></i>
+                        Attendance registration
+                    </a>
+                    <a href="#" class="btn btn-outline-info">
+                        <i class="bi bi-file-text me-2"></i>
+                        Attendance Report
+                    </a>
+                    <a href="#" class="btn btn-outline-secondary">
+                        <i class="bi bi-question-circle me-2"></i>
+                        Help
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
